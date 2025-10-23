@@ -2,13 +2,7 @@
 
 Repository for the official implementation of our paper "Adv-Inversion: Stealthy Adversarial Attacks via GAN-Inversion for Facial Privacy Protection".
 
----
-
-## Abstract
-
-With the rapid advancement of deep face recognition (FR) systems, concerns over the unauthorized use of facial data have become increasingly serious. Although adversarial attacks have been employed to obscure identity information and protect user privacy, existing methods often struggle with degraded visual quality, low success rates in black-box attacks, and dependence on identity-specific training. To overcome these limitations, we introduce Adv-Inversion, a novel and stealthy adversarial attack technique for facial privacy protection. Our approach leverages an encoder-based GAN inversion framework, incorporating a redesigned feature style encoder to prioritize adversarial attacks over traditional editing tasks. By embedding adversarial perturbations iteratively into the feature tensor space, the method ensures high imperceptibility, robust attack transferability, and flexibility without the need for identity-specific training. Additionally, we introduce an **Identity Prior Feature Fusion Module** for identity-specific scenarios, enabling alignment between reconstructed and target faces while enhancing black-box attack success through an ensemble training strategy. Extensive experiments across two datasets, four open-source FR models on both face verification and face identification tasks, and two commercial FR APIs demonstrate that Adv-Inversion significantly outperforms related methods in both identity-free and identity-specific training scenarios, achieving state-of-the-art results in attack success rate and visual quality metrics. The approach also exhibits robustness against common adversarial defense methods. Multiple ablation studies further confirm the effectiveness of our model design.
-
----
+This repository contains the official implementation of Adv-Inversion, a novel framework for generating identity-preserving adversarial face samples via GAN inversion, designed to enhance facial privacy protection against unauthorized recognition systems.
 
 ## Installation
 
@@ -55,6 +49,7 @@ To evaluate the attack results using SSIM and PSNR metrics:
 ##Citation
 
 To be added after paper acceptance.
+
 
 
 If you have any questions, please contact [wanghb69@mail2.sysu.edu.cn]
