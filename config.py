@@ -20,13 +20,13 @@ def get_fr_model(name):
         model.load_state_dict(torch.load('pretrained_models/irse50.pth', map_location=torch.device('cpu')))
     elif name == 'MobileFace':
         model = MobileFaceNet(512)
-        model.load_state_dict(torch.load('pretrained_modelsmobile_face.pth', map_location=torch.device('cpu')))
+        model.load_state_dict(torch.load('pretrained_models/mobile_face.pth', map_location=torch.device('cpu')))
     elif name == 'IR152':
         model = IR_152([112, 112])
-        model.load_state_dict(torch.load('pretrained_modelsir152.pth', map_location=torch.device('cpu')))
+        model.load_state_dict(torch.load('pretrained_models/ir152.pth', map_location=torch.device('cpu')))
     elif name == 'FaceNet':
         model = InceptionResnetV1(num_classes=8631)
-        model.load_state_dict(torch.load('pretrained_modelsfacenet.pth', map_location=torch.device('cpu')))
+        model.load_state_dict(torch.load('pretrained_models/facenet.pth', map_location=torch.device('cpu')))
     else:
         raise ValueError(f'Invalid model name: {name}')
 
@@ -178,4 +178,5 @@ def asr_calculation_dogging_txt(cos_sim_scores_dict, output_path=None):
 
         # Close the file if it was opened
     if file:
+
         file.close()
